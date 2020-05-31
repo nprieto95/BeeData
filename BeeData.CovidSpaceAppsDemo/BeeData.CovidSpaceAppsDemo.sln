@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeeData.CovidSpaceAppsDemo", "BeeData.CovidSpaceAppsDemo\BeeData.CovidSpaceAppsDemo.csproj", "{57BEED0C-A672-4F2F-AA2E-56B737947DEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeeData.CovidSpaceAppsDemo.SampleImplementations", "BeeData.CovidSpaceAppsDemo.SampleImplementations\BeeData.CovidSpaceAppsDemo.SampleImplementations.csproj", "{36CD9F83-9FD5-4129-83FA-7920C5BAD845}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{57BEED0C-A672-4F2F-AA2E-56B737947DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57BEED0C-A672-4F2F-AA2E-56B737947DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57BEED0C-A672-4F2F-AA2E-56B737947DEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36CD9F83-9FD5-4129-83FA-7920C5BAD845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36CD9F83-9FD5-4129-83FA-7920C5BAD845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36CD9F83-9FD5-4129-83FA-7920C5BAD845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36CD9F83-9FD5-4129-83FA-7920C5BAD845}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
