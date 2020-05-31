@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 
@@ -14,11 +15,16 @@ namespace BeeData.CovidSpaceAppsDemo.SampleImplementations
 
         public WorldTemperatureAnomalyPreScoreProvider()
         {
-            var client = new HttpClient();
-            client.DefaultRequestHeaders.Add("Accept", "*/*");
-            var response = client.GetAsync("https://data.giss.nasa.gov/gistemp/graphs/graph_data/Global_Mean_Estimates_based_on_Land_and_Ocean_Data/graph.txt").Result;
-            var text = response.Content.ReadAsStringAsync().Result;
-            var lines = text.Split('\n');
+            // Looks like we got blacklisted by an anti DDOS agent; the HTTP request started failing; leaving the code here for demo purposes.
+            //var client = new HttpClient();
+            //client.DefaultRequestHeaders.Add("Accept", "*/*");
+            //var response = client.GetAsync("https://data.giss.nasa.gov/gistemp/graphs/graph_data/Global_Mean_Estimates_based_on_Land_and_Ocean_Data/graph.txt").Result;
+            //var text = response.Content.ReadAsStringAsync().Result;
+            //var lines = text.Split('\n');
+
+            // And using a local copy instead
+            var lines = File.ReadAllLines("temperatureAnomalies.txt");
+
             anomalies = new Dictionary<int, double>();
             for (int i = 5; i < lines.Length; i++)
             {

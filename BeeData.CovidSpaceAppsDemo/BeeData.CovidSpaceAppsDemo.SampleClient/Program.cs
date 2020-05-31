@@ -8,12 +8,24 @@ namespace BeeData.CovidSpaceAppsDemo.SampleClient
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Bee Data demo for SpaceApps COVID-19 edition - 1.0");
-            Console.WriteLine("Loading providers...");
-            var preScoreProviders = new Dictionary<IPreScoreProvider, double>
+            Console.WriteLine("Bee Data demo for SpaceApps COVID-19 edition - 1.0\n");
+            Console.WriteLine("Loading demo 1...");
+            Evaluate(new Dictionary<IPreScoreProvider, double>
             {
+                { new WorldTemperatureAnomalyPreScoreProvider(), 1 },
                 { new WorldCarbonDioxidePreScoreProvider(), 1 }
-            };
+            });
+            Console.WriteLine("Loading demo 2...");
+            Evaluate(new Dictionary<IPreScoreProvider, double>
+            {
+                { new WorldTemperatureAnomalyPreScoreProvider(), 2 },
+                { new WorldCarbonDioxidePreScoreProvider(), 1 }
+            });
+            Console.ReadKey();
+        }
+
+        private static void Evaluate(IDictionary<IPreScoreProvider, double> preScoreProviders)
+        {
             Console.WriteLine("\n=================================");
             Console.WriteLine("Using the following providers:");
             foreach (var item in preScoreProviders.Keys)
@@ -22,11 +34,12 @@ namespace BeeData.CovidSpaceAppsDemo.SampleClient
             }
             var scoreProvider = new ScoreProvider(preScoreProviders);
             Console.WriteLine("=================================\n\nResults:");
-            for (int i = 1989; i < 2020; i++)
+            for (int i = 2015; i < 2020; i++)
             {
                 Console.WriteLine($"Year: {i}\tScore: {scoreProvider.GetScore(new DateTime(i, 1, 1))}");
             }
-            Console.ReadKey();
+            Console.WriteLine();
         }
+
     }
 }

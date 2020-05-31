@@ -10,4 +10,10 @@
     <ProjectReference Include="..\BeeData.CovidSpaceAppsDemo\BeeData.CovidSpaceAppsDemo.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="temperatureAnomalies.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
