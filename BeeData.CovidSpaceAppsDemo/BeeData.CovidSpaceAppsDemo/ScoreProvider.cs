@@ -19,7 +19,7 @@ namespace BeeData.CovidSpaceAppsDemo
 
         public double GetScore(DateTime dateTime)
         {
-            var totalWeight = preScoreWeights.Sum(kvp => kvp.Value);
+            var totalWeight = preScoreWeights.Values.Sum();
             return preScoreProviders.AsParallel().Sum(psp => psp.GetPreScore(dateTime) * (preScoreWeights[psp] / totalWeight));
         }
 
