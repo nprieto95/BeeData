@@ -15,7 +15,9 @@ namespace BeeData.CovidSpaceAppsDemo.SampleImplementations
         public WorldTemperatureAnomalyPreScoreProvider()
         {
             var client = new HttpClient();
-            var text = client.GetAsync("https://data.giss.nasa.gov/gistemp/graphs/graph_data/Global_Mean_Estimates_based_on_Land_and_Ocean_Data/graph.txt").Result.Content.ReadAsStringAsync().Result;
+            client.DefaultRequestHeaders.Add("Accept", "*/*");
+            var response = client.GetAsync("https://data.giss.nasa.gov/gistemp/graphs/graph_data/Global_Mean_Estimates_based_on_Land_and_Ocean_Data/graph.txt").Result;
+            var text = response.Content.ReadAsStringAsync().Result;
             var lines = text.Split('\n');
             anomalies = new Dictionary<int, double>();
             for (int i = 5; i < lines.Length; i++)
