@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentFTP" Version="32.4.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BeeData.CovidSpaceAppsDemo\BeeData.CovidSpaceAppsDemo.csproj" />
   </ItemGroup>
 
