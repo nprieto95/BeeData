@@ -1,0 +1,62 @@
+{
+  "name": "ecommerce",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.9.13",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.53",
+    "@microsoft/applicationinsights-react-js": "^2.5.4",
+    "@microsoft/applicationinsights-web": "^2.5.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/classnames": "^2.2.10",
+    "@types/jest": "^24.0.0",
+    "@types/jquery": "^3.3.38",
+    "@types/lodash": "^4.14.150",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
+    "@types/react-redux": "^7.1.8",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/redux-logger": "^3.0.7",
+    "@types/redux-thunk": "^2.1.0",
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "jquery": "^3.5.1",
+    "lodash": "^4.17.15",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-svg": "^11.0.21",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "typescript": "~3.7.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {}
+}
