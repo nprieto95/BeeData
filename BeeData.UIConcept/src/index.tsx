@@ -18,16 +18,6 @@ import { createBrowserHistory } from "history";
 
 const browserHistory = createBrowserHistory({ basename: '' });
 var reactPlugin = new ReactPlugin();
-var appInsights = new ApplicationInsights({
-    config: {
-        instrumentationKey: config.APPINSIGHTS_INSTRUMENTATIONKEY,
-        extensions: [reactPlugin],
-        extensionConfig: {
-          [reactPlugin.identifier]: { history: browserHistory }
-        }
-    }
-});
-appInsights.loadAppInsights();
 
 const persistedStore = store();
 
